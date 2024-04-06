@@ -26,10 +26,7 @@ function finishLoad(){
 
 $(document).ready(async function() {
     if (!$("body").hasClass("permanent-loader")){
-        if (isMobile.any()) {
-            $("#site").prepend('<img class="showcase" style="object-fit:cover; object-position:60%; height: 100vh; width: 100vw" alt="onk" title="onk" src="resources/images/background.png">');
-            finishLoad()
-        } else {
+        
             $("#site").prepend('<video class="showcase" id="video" autoplay muted loop><source src="resources/videos/showcase.mp4" type="video/mp4"></video>');
             $("#video").bind('loadeddata', function(e) {
                 finishLoad()
